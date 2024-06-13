@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('asssets/cargas/carga.jpeg'); 
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed; /* Esto hará que la imagen permanezca fija al hacer scroll */
 }
+
 
 header {
     background-color: #333;

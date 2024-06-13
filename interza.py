@@ -2,8 +2,6 @@ import sys
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushButton, QMessageBox,QLineEdit
 from PySide6.QtGui import QPixmap
 import os
-
-# Importamos la clase Etapa1Window
 from etapa1 import Etapa1Window
 
 class LoginWindow(QWidget):
