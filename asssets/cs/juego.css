@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('asssets/cargas/carga.jpeg'); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* Esto hará que la imagen permanezca fija al hacer scroll */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para la caja de contenido */
+}
+
+.monster {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.monster img {
+    width: 300px;
+    height: auto;
+}
+
+.characters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.character {
+    width: calc(20% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.character img {
+    width: 100px;
+    height: auto;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.heal-icon {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+

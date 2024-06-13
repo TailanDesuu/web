@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etapa 1: Batalla contra el Monstruo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('asssets/cargas/carga.jpeg'); /* Ajusta la ruta a tu imagen */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para la caja de contenido */
+        }
+
+        .monster {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .monster img {
+            width: 300px;
+            height: auto;
+        }
+
+        .characters {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .character {
+            width: calc(20% - 20px);
+            margin-bottom: 20px;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .character img {
+            width: 100px;
+            height: auto;
+        }
+
+        .button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .heal-icon {
+            width: 50px;
+            height: auto;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="monster">
+            <h2>Vida del Monstruo: <span id="monster-health">1000</span></h2>
+            <img src="asssets/vichos x/jefe esqueleto.jpeg" alt="Monstruo">
+        </div>
+
+        <div class="characters">
+            <div class="character">
+                <h3>Guerrero: <span id="guerrero-health">100</span></h3>
+                <img src="asssets/personajes/guerrero.jpeg" alt="Guerrero">
+                <button class="button" onclick="characterAttack('Guerrero', 20)">Golpe Espada</button>
+            </div>
+            <div class="character">
+                <h3>Mago: <span id="mago-health">100</span></h3>
+                <img src="asssets/personajes/mago.jpeg" alt="Mago">
+                <button class="button" onclick="characterAttack('Mago', 20)">Volar de Fuego</button>
+            </div>
+            <div class="character">
+                <h3>Caballero: <span id="caballero-health">100</span></h3>
+                <img src="asssets/personajes/caballero.jpeg" alt="Caballero">
+                <button class="button" onclick="characterAttack('Caballero', 20)">Espadazo</button>
+            </div>
+            <div class="character">
+                <h3>Arquero Elfo: <span id="arquero-health">100</span></h3>
+                <img src="asssets/personajes/arquero.jpeg" alt="Arquero Elfo">
+                <button class="button" onclick="characterAttack('Arquero Elfo', 20)">Flecha Precisa</button>
+            </div>
+            <div class="character">
+                <h3>Lancero: <span id="lancero-health">100</span></h3>
+                <img src="asssets/personajes/lanzero.jpeg" alt="Lancero">
+                <button class="button" onclick="characterAttack('Lancero', 20)">Lanzar Lanza</button>
+            </div>
+        </div>
+
+        <img src="asssets/creacion de personajes/cura.jpeg" alt="Curar" class="heal-icon" id="heal-icon">
+    </div>
+
+    <script src="asssets/js/juego.js"></script>
+
+    <script>
+        document.getElementById("heal-icon").addEventListener("click", function(event) {
+            event.preventDefault(); // Evitar que la página se recargue al hacer clic en el ícono de curar
+            healCharacters();
+        });
+    </script>
+</body>
+</html>

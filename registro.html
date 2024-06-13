@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Rol</title>
+    <link rel="stylesheet" href="asssets/cs/style.css">
+</head>
+<body>
+    <header>
+        <h1> Crea tu Personaje</h1>
+    </header>
+    <main id="creacion-personaje">
+        <h2>Crear Personaje</h2>
+        <form id="form-personaje">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="clase">Clase:</label>
+            <select id="clase" name="clase" required onchange="mostrarImagen()">
+                <option value="guerrero">Guerrero</option>
+                <option value="mago">Mago</option>
+                <option value="arquero">Arquero</option>
+                <option value="lanzero">lanzero</option>
+                <option value="caballero">Caballero</option>
+            </select>
+
+            <div id="imagen-personaje"></div> <!-- Aquí se mostrará la imagen del personaje -->
+
+            <button type="submit">Crear Personaje</button>
+        </form>
+  
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mostrarImagen(); // Mostrar la imagen del personaje por defecto (el primero en la lista)
+        });
+
+        function mostrarImagen() {
+            var claseSeleccionada = document.getElementById("clase").value;
+            var imagenPersonaje = document.getElementById("imagen-personaje");
+            // Limpia la imagen anterior
+            imagenPersonaje.innerHTML = "";
+            // Crea una imagen con la clase correspondiente
+            var img = document.createElement("img");
+            img.src = `asssets/personajes/${claseSeleccionada}.jpeg`; // Asegúrarse de que la extensión del archivo sea correcta ya que si no muestra todo en error
+            img.alt = claseSeleccionada;
+            imagenPersonaje.appendChild(img);
+        }
+
+        document.getElementById("form-personaje").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario 
+            
+            window.location.href = "juegoc1.html"; // Redirigir a juegoc1.html
+        });
+    </script>
+</body>
+</html>
